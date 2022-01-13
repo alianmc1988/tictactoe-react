@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 // import from helpers
 import { winningCheck, drawCheck } from "../helpers/game_logic";
 // import Prompt_Component
-import Prompt_component from "./Prompt_component";
+import PromptComponent from "./PromptComponent";
 // CSS
-import "./Board_component.css";
+import "./BoardComponent.css";
 
 // Initial state of the App
 const initialPlayerState = {
@@ -16,7 +16,7 @@ const initialPlayerState = {
   drawFlag: false,
 };
 
-const Board_component = () => {
+const BoardComponent = () => {
   const [game, setGame] = useState(initialPlayerState);
 
   useEffect(() => {
@@ -84,13 +84,13 @@ const Board_component = () => {
     <>
       <div className="game-container">
         {game.winFlag ? (
-          <Prompt_component
+          <PromptComponent
             resetGame={returnInitialState}
             whoWon={!game.turnFlag ? "Player 1 won" : "Player 2 won"}
           />
         ) : (
           game.drawFlag && (
-            <Prompt_component whoWon={"Tie"} resetGame={returnInitialState} />
+            <PromptComponent whoWon={"Tie"} resetGame={returnInitialState} />
           )
         )}
         <div style={{ padding: "2rem", text: "center" }}>
@@ -183,7 +183,7 @@ const Board_component = () => {
   );
 };
 
-export default Board_component;
+export default BoardComponent;
 
 // Conditional Styles
 // Winning styles

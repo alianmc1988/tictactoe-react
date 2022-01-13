@@ -1,6 +1,6 @@
 import React from "react";
 
-const Prompt_component = (props) => {
+const PromptComponent = (props) => {
   return (
     <div className={"winninPrompt"} onClick={props.resetGame}>
       <span style={{ marginBottom: "1rem" }}>
@@ -10,4 +10,4 @@ const Prompt_component = (props) => {
   );
 };
 
-export default Prompt_component;
+export default PromptComponent;
