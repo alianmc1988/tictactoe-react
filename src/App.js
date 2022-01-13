@@ -1,9 +1,13 @@
 import "./App.css";
+import { useSelector } from "react-redux";
+import Board_component from "./components/Board_component";
 
 function App() {
+  const state = useSelector((state) => state);
+  console.log(state);
   return (
     <div className="App">
-      <h1>Tictactoe</h1>
+      <Board_component />
     </div>
   );
 }
